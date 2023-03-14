@@ -1,6 +1,9 @@
 import requests
 from django.http import JsonResponse
 
+#This function retrieves data from the external api (thecatapi) and returns it as a JSON format response using JsonResponse 
+#So it can be consumed by the frontend eaasily 
+
 def get_cat_images(request):
     response = requests.get('https://api.thecatapi.com/v1/images/search?limit=15&has_breeds=1&api_key=live_29SBrJGFNPFMKqePAlkIX4XodxU8YjXpDqRDk5Svj5cbcLTQJAdwBcRxWi4IEUJk')
     data = response.json()

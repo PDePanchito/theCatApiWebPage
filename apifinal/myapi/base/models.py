@@ -1,5 +1,6 @@
 from django.db import models
 
+#Cat.models is the data that will be stored in the database
 class Cat(models.Model):
     breed_name = models.CharField(max_length=40)
     cat_temperament = models.CharField(max_length=100)
