@@ -10,9 +10,12 @@
             <p class="card-text">{{ cat.description }}</p>
           </div>
         </div>
+        <BreakLine/>
       </div>
     </div>
+    <ScrollToTop/>
     <PagesFooter/>
+
   </div>
 </template>
 
@@ -38,6 +41,8 @@ import { getApi } from "@/axios-api";
 import PagesFooter from "@/components/PagesFooter.vue";
 import ScrollToTop from "@/components/ScrollToTop.vue";
 import Header from "@/components/Header.vue";
+import BreakLine from "@/components/BreakLine.vue";
+
 
 
 export default {
@@ -45,6 +50,7 @@ export default {
     PagesFooter,
     ScrollToTop,
     Header,
+    BreakLine,
   },
   data() {
     return {

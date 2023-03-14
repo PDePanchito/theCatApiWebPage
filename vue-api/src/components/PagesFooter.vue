@@ -35,10 +35,6 @@
   margin-top: 2rem;
 }
 
-.gallery-footer router-link {
-  margin: 0 1rem;
-}
-
 #pagination {
   color: #d3a31f;
   font-size: 50px;

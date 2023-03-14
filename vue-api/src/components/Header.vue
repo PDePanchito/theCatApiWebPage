@@ -1,7 +1,8 @@
+<!-- Component that renders a title for every page -->
+
 <template>
     <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
         <div class="container-fluid">
-          <!-- Navbar brand -->
           <a class="navbar-brand nav-link" target="_blank" href="https://www.youtube.com/watch?v=_9ZKOLVEjJI&ab_channel=GatosGraciosos">
             <strong>Galería de gatitos</strong>
           </a>
@@ -10,11 +11,12 @@
             <i class="fas fa-bars"></i>
           </button>
           <div class="collapse navbar-collapse" id="navbarExample01">
-                 
           </div>
         </div>
       </nav>
 </template>
+
+<!-- This exports the component and allows us to use it outside this file  -->
 
 <script>
 export default {

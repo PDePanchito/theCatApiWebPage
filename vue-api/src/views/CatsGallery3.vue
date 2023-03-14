@@ -10,6 +10,7 @@
             <p class="card-text">{{ cat.description }}</p>
           </div>
         </div>
+        <BreakLine/>
       </div>
     </div>
     <PagesFooter/>
@@ -38,12 +39,14 @@ import { getApi } from "@/axios-api";
 import PagesFooter from "@/components/PagesFooter.vue";
 import ScrollToTop from "@/components/ScrollToTop.vue";
 import Header from "@/components/Header.vue";
+import BreakLine from "../components/BreakLine.vue";
 
 export default {
   components: {
     PagesFooter,
     ScrollToTop,
     Header,
+    BreakLine,
   },
   data() {
     return {

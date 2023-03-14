@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path, include
 from apicat.views import get_cat_images
 
-
+#Ignore this routes, they are not necessary for the project
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('data/', include('apicat.urls')),

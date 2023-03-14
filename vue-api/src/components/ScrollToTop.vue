@@ -1,6 +1,7 @@
+<!-- Component that adds a button to scroll back to the top of the page in a smooth way. Not looking the way i would like yet. -->
+
 <template>
     <div class="scroll-top">
-      <!-- Gallery content here -->
       <button class="btn btn-primary me-md-2" @click="scrollToTop">
         <h1 class="message">&#8593;	</h1>
       </button>

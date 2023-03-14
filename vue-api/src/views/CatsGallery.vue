@@ -1,3 +1,8 @@
+
+<!-- The webpage is composed by 3 main pages (you can check more about the routes in './router/index.js')-->
+<!-- All of them renders the same but on different pages and show different cats for every page-->
+
+
 <template>
   <div>
     <Header/>
@@ -10,6 +15,7 @@
             <p class="card-text">{{ cat.description }}</p>
           </div>
         </div>
+        <BreakLine/>
       </div>
     </div>
     <ScrollToTop/>
@@ -31,7 +37,6 @@
 }
 
 
-
 </style>
 
 <script>
@@ -39,12 +44,14 @@ import { getApi } from "@/axios-api";
 import PagesFooter from "@/components/PagesFooter.vue";
 import ScrollToTop from "@/components/ScrollToTop.vue";
 import Header from "@/components/Header.vue";
+import BreakLine from "@/components/BreakLine.vue";
 
 export default {
   components: {
     PagesFooter,
     ScrollToTop,
     Header,
+    BreakLine,
   },
   data() {
     return {
