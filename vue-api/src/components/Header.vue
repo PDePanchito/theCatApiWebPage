@@ -1,6 +1,7 @@
 <!-- Component that renders a title for every page -->
 
 <template>
+  <div class="text-center">
     <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
         <div class="container-fluid">
           <a class="navbar-brand nav-link" target="_blank" href="https://www.youtube.com/watch?v=_9ZKOLVEjJI&ab_channel=GatosGraciosos">
@@ -14,6 +15,7 @@
           </div>
         </div>
       </nav>
+    </div>
 </template>
 
 <!-- This exports the component and allows us to use it outside this file  -->
@@ -29,4 +31,5 @@ export default {
 .navbar .nav-link {
     color: #fff !important;
   }
+  
 </style>

@@ -2,23 +2,37 @@
   <div>
     <Header/>
     <div class="row">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="text-center">GATOS DEL MUNDO</th>
+          </tr>
+        </thead>
       <div v-for="(cat, index) in cat_info" :key="index" class="col-md-4">
-        <div class="card mb-3">
-          <img :src="cat.url" class="card-img-top" alt="Gatito" width="100%">
-          <div class="card-body">
-            <h5 class="card-title">{{ cat.name }}</h5>
-            <p class="card-text">{{ cat.description }}</p>
-          </div>
-        </div>
-        <BreakLine/>
+        <tbody class="table-body">
+          <tr class="table-row">
+            <td ><img :src="cat.url" alt="gatito" class="card-img-top table-img"></td>
+          </tr>
+          <tr>
+            <td class="text-center">{{cat.name}}</td>
+          </tr>
+        </tbody>
       </div>
+      <BreakLine/>
+     </table>
     </div>
+
+    <ScrollToTop/>
     <PagesFooter/>
   </div>
 </template>
 
 <style scoped>
-
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .card {
   margin: 1rem;
   display: flex;
@@ -27,8 +41,26 @@
 
 .card-img-top{
   height: 300px;
-  object-fit: cover;
+  object-fit: contain;
 }
+.table-body {
+display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-row{
+  display: flex;
+  flex-direction: row;
+}
+
+.table-img {
+  height: 400px;
+  width: 600px;
+  object-fit: contain;
+}
+
 
 
 

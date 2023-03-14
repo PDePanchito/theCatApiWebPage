@@ -1,22 +1,25 @@
-
-<!-- The webpage is composed by 3 main pages (you can check more about the routes in './router/index.js')-->
-<!-- All of them renders the same but on different pages and show different cats for every page-->
-
-
 <template>
   <div>
     <Header/>
     <div class="row">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="text-center">GATOS DEL MUNDO</th>
+          </tr>
+        </thead>
       <div v-for="(cat, index) in cat_info" :key="index" class="col-md-4">
-        <div class="card mb-3">
-          <img :src="cat.url" class="card-img-top" alt="Gatito" width="100%">
-          <div class="card-body">
-            <h5 class="card-title">{{ cat.name }}</h5>
-            <p class="card-text">{{ cat.description }}</p>
-          </div>
-        </div>
-        <BreakLine/>
+        <tbody class="table-body">
+          <tr class="table-row">
+            <td ><img :src="cat.url" alt="gatito" class="card-img-top table-img"></td>
+          </tr>
+          <tr>
+            <td class="text-center">{{cat.name}}</td>
+          </tr>
+        </tbody>
       </div>
+      <BreakLine/>
+     </table>
     </div>
     <ScrollToTop/>
     <PagesFooter/>
@@ -24,7 +27,11 @@
 </template>
 
 <style scoped>
-
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .card {
   margin: 1rem;
   display: flex;
@@ -33,8 +40,27 @@
 
 .card-img-top{
   height: 300px;
-  object-fit: cover;
+  object-fit: contain;
 }
+.table-body {
+display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-row{
+  display: flex;
+  flex-direction: row;
+}
+
+.table-img {
+  height: 400px;
+  width: 600px;
+  object-fit: contain;
+}
+
+
 
 
 </style>
@@ -44,7 +70,7 @@ import { getApi } from "@/axios-api";
 import PagesFooter from "@/components/PagesFooter.vue";
 import ScrollToTop from "@/components/ScrollToTop.vue";
 import Header from "@/components/Header.vue";
-import BreakLine from "@/components/BreakLine.vue";
+import BreakLine from "../components/BreakLine.vue";
 
 export default {
   components: {

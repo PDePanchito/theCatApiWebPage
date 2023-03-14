@@ -25,7 +25,8 @@ const router = createRouter({
       path: '/cats/page3',
       name: 'cats3',
       component: () => import('../views/CatsGallery3.vue'),
-    }
+    },
+    
   ],
   scrollBehavior(to, from, savedPosition) {
     return { top: 0 };
